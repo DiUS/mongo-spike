@@ -22,7 +22,7 @@ privileged aspect ApplicationConversionServiceFactoryBean_Roo_ConversionService 
     public Converter<Order, String> ApplicationConversionServiceFactoryBean.getOrderToStringConverter() {
         return new org.springframework.core.convert.converter.Converter<au.com.dius.spike.nosql.domain.Order, java.lang.String>() {
             public String convert(Order order) {
-                return new StringBuilder().append(order.getDatePlaced()).append(" ").append(order.getCustomerName()).toString();
+                return new StringBuilder().append(order.getCustomerName()).toString();
             }
         };
     }

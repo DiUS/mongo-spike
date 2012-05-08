@@ -3,7 +3,6 @@
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <jsp:output omit-xml-declaration="yes"/>
     <page:show id="ps_au_com_dius_spike_nosql_domain_Order" object="${order}" path="/orders" z="x5J2orbZYIqdmpmx7NY1n5dx00A=">
-        <field:display date="true" dateTimePattern="${order_dateplaced_date_format}" field="datePlaced" id="s_au_com_dius_spike_nosql_domain_Order_datePlaced" object="${order}" z="Sgokz8Dcmh/+cy3Fdb5OYvR9hcg="/>
         <field:display field="customerName" id="s_au_com_dius_spike_nosql_domain_Order_customerName" object="${order}" z="7F++pdLtPenT0pTj3KyxWbX2OOo="/>
     </page:show>
 </div>

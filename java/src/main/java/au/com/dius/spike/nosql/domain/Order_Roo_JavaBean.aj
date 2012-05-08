@@ -4,17 +4,8 @@
 package au.com.dius.spike.nosql.domain;
 
 import au.com.dius.spike.nosql.domain.Order;
-import java.util.Date;
 
 privileged aspect Order_Roo_JavaBean {
-    
-    public Date Order.getDatePlaced() {
-        return this.datePlaced;
-    }
-    
-    public void Order.setDatePlaced(Date datePlaced) {
-        this.datePlaced = datePlaced;
-    }
     
     public String Order.getCustomerName() {
         return this.customerName;

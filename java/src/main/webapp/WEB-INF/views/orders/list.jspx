@@ -4,7 +4,6 @@
     <jsp:output omit-xml-declaration="yes"/>
     <page:list id="pl_au_com_dius_spike_nosql_domain_Order" items="${orders}" z="TAcCgWY5K71wqy8TT6+HpZGbQjY=">
         <table:table data="${orders}" id="l_au_com_dius_spike_nosql_domain_Order" path="/orders" z="DC/P+IJCDWjIhBvyAQ3bM0ekX0k=">
-            <table:column date="true" dateTimePattern="${order_dateplaced_date_format}" id="c_au_com_dius_spike_nosql_domain_Order_datePlaced" property="datePlaced" z="dNTOFTL6gN0jI0oDSz2PIQ/TIo8="/>
             <table:column id="c_au_com_dius_spike_nosql_domain_Order_customerName" property="customerName" z="HHwt/8JDZIcRB+0nzK2Z3fe27FY="/>
         </table:table>
     </page:list>
