@@ -15,10 +15,10 @@
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
           <boolProp name="LoopController.continue_forever">false</boolProp>
-          <stringProp name="LoopController.loops">200</stringProp>
+          <stringProp name="LoopController.loops">1000</stringProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">20</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">30</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">60</stringProp>
         <longProp name="ThreadGroup.start_time">1336356583000</longProp>
         <longProp name="ThreadGroup.end_time">1336356583000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
@@ -35,12 +35,12 @@
             </elementProp>
             <elementProp name="SERVER" elementType="Argument">
               <stringProp name="Argument.name">SERVER</stringProp>
-              <stringProp name="Argument.value">192.168.0.212</stringProp>
+              <stringProp name="Argument.value">192.168.0.56</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="PORT" elementType="Argument">
               <stringProp name="Argument.name">PORT</stringProp>
-              <stringProp name="Argument.value">3000</stringProp>
+              <stringProp name="Argument.value">8080</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
           </collectionProp>
@@ -55,6 +55,10 @@
           <collectionProp name="HeaderManager.headers">
             <elementProp name="" elementType="Header">
               <stringProp name="Header.name">Accept</stringProp>
+              <stringProp name="Header.value">application/json</stringProp>
+            </elementProp>
+            <elementProp name="" elementType="Header">
+              <stringProp name="Header.name">Content-Type</stringProp>
               <stringProp name="Header.value">application/json</stringProp>
             </elementProp>
           </collectionProp>
@@ -89,19 +93,7 @@
                 <elementProp name="" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.value">{&#xd;
-&quot;customer&quot; : &quot;Jon&quot;,&#xd;
-&quot;products&quot; : [&#xd;
-{&#xd;
-  &quot;name&quot; : &quot;superdooper-2000&quot;,&#xd;
-  &quot;price&quot; : 100.00,&#xd;
-  &quot;qty&quot; : 2&#xd;
-},&#xd;
-{&#xd;
-  &quot;name&quot; : &quot;superdooper-3000&quot;,&#xd;
-  &quot;price&quot; : 200.00,&#xd;
-  &quot;qty&quot; : 1&#xd;
-}&#xd;
-]&#xd;
+&quot;customerName&quot; : &quot;foobar&quot;&#xd;
 }</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                 </elementProp>
@@ -123,7 +115,7 @@
             <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
           </HTTPSamplerProxy>
           <hashTree>
-            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Newly Created Entity" enabled="true">
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Newly Created Entity" enabled="false">
               <stringProp name="RegexExtractor.useHeaders">true</stringProp>
               <stringProp name="RegexExtractor.refname">NEW_ORDER_ID</stringProp>
               <stringProp name="RegexExtractor.regex">Location: (.*)?</stringProp>
@@ -135,7 +127,7 @@
             </RegexExtractor>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="retrieve order" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="retrieve order" enabled="false">
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
               <collectionProp name="Arguments.arguments"/>
             </elementProp>
