@@ -14,3 +14,14 @@ Test harnesses for both java and rails apps that fire off read/write requests to
 
 rails
 Sample rails app that connects to a mongo replica set.
+
+
+Requirements
+
+o You need to install mongodb and configure a replica set.  The replica set can be across multiple machines, or just locally.  Whatever you decide you will need to update the  relevant configuration files in both the java app and rails app.  For information on how to create a replica set see this mongo link http://www.mongodb.org/display/DOCS/Replica+Sets+-+Basics
+
+For java
+	update database.properties
+	
+For rails
+	update initializers/mongo.rb
