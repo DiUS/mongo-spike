@@ -1,1 +1,10 @@
 MongoDB spike day code
+
+<h1>java</h1>
+Contains a sample java app built using Spring Roo which connects to a mongo replica set.
+
+<h1>jmeter</h1>
+Test harnesses for both java and rails apps that fire off read/write requests to generate load
+
+<h1>rails</h1>
+Sample rails app that connects to a mongo replica set.
